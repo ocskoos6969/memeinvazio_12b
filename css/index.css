@@ -1,5 +1,5 @@
 :root {
-    --text-color: #17BD3E;
+    --text-color: #17BD3E; 
 }
 
 * {
@@ -17,7 +17,6 @@ body {
 }
 
 .tarolo {
-    max-width: 1200px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -42,7 +41,6 @@ body {
 }
 
 .login, .reg {
-    border: 1px solid black;
     border-radius: 20px;
     padding: 15px;
     width: 500px;
@@ -50,6 +48,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: ease 0.5s;
 }
 
 .login:hover, .reg:hover {
@@ -73,6 +72,6 @@ body {
 
 @media screen and (max-width: 450px) {
     .login, .reg {
-        width: 350px;
+        width: 340px;
     }
 }
