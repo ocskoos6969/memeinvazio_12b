@@ -1,8 +1,9 @@
+/* alap beállítások */
 :root {
-    --text-color:#17BD3E;
+    --text-color: #17BD3E;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,6 +14,7 @@ html {
     background-color: silver;
 }
 
+/* ----- a fejléc a menüvel ----- */
 header {
     background-color: white;
     display: flex;
@@ -32,6 +34,7 @@ header {
     color: var(--text-color);
 }
 
+/*  menü alapállapotban */
 nav {
     display: flex;
     gap: 2rem;
@@ -44,14 +47,14 @@ nav a {
     color: black;
     width: 60px;
     height: 60px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: ease 500ms;
-    border-radius: 50%;
 }
 
-nav a:hover{
+nav a:hover {
     transform: scale(1.1);
 }
 
@@ -64,14 +67,18 @@ nav a:hover{
     color: white;
 }
 
-.hamburge-menu {
+/* hamburger menü */
+.hamburger-menu {
     background-color: white;
     width: 30px;
     height: 25px;
     display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
-.hamburge-menu span {
+.hamburger-menu span {
     display: block;
     height: 4px;
     width: 100%;
@@ -83,7 +90,7 @@ nav a:hover{
     display: none;
 }
 
-.menu-toggle :checked~nav{
+.menu-toggle:checked~nav {
     display: flex;
 }
 
@@ -100,13 +107,13 @@ main {
 .newMeme {
     height: 300px;
     width: 500px;
-    /*border: 1px solid black;*/
+    /* border: 1px solid black; */
     border-radius: 0.5rem;
     background-image: url('../img/transparent.jpg');
     position: relative;
 }
 
-.newMeme >label {
+.newMeme>label {
     background-color: #62605C;
     position: absolute;
     top: 70%;
@@ -140,7 +147,7 @@ main {
 }
 
 .uploadButton:hover {
-    transform: scale(1.1);
+    transform: scale(1.01);
 }
 
 .uploadButton>button {
@@ -151,16 +158,16 @@ main {
     cursor: pointer;
 }
 
-
-@media  screen and (max-width: 760px) {
-    .hamburge-menu {
+/* --- hamburger menü, plus gomb 768px-től --- */
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
         display: flex;
     }
 
     nav {
-        width: 100%;
         flex-direction: row;
         justify-content: space-around;
+        width: 100%;
         background-color: white;
         padding: 10px;
         position: absolute;
@@ -170,7 +177,8 @@ main {
         display: none;
     }
 
-    .newMeme, .uploadButton{
+    .newMeme,
+    .uploadButton {
         width: 350px;
     }
 }
